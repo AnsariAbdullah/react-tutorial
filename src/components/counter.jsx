@@ -18,12 +18,13 @@ class Counter extends Component {
 
     return (
       <React.Fragment>
+        {this.props.children}
         <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
         <button
-          // onClick={() => this.handleIncrement(product)}
-          onClick={this.handleIncrement}
-          className="btn btn-secondary btn-sm"
-        >
+            // onClick={() => this.handleIncrement(product)}
+            onClick={this.handleIncrement}
+            className="btn btn-secondary btn-sm"
+          >
           Increment
         </button>
         <ul>{this.state.tags.map(tag => <li key={tag}>{tag}</li>)}</ul>
