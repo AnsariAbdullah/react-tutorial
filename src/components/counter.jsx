@@ -13,6 +13,14 @@ class Counter extends Component {
   //   })
   // }
 
+  componentDidUpdate(prevProps, prevState){
+    console.log('prevProps', prevProps);
+    console.log('prevState', prevState);
+    if (prevState.counter.value !== this.props.counter.value){
+      // Make ajax call and get new data from server
+    }
+  }
+
   render() {
     // console.log('props', this.props)
     console.log('Counter - Rendered');
